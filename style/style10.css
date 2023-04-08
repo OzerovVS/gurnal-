@@ -1,0 +1,144 @@
+@import "bourbon";
+html, body {
+    transition: all .1s cubic-bezier(1,.45,0,.34);
+    height: 100%;
+} 
+div{
+    margin-top: 10%;
+}
+#str1{
+    position: fixed;
+    inline-size: 100%;
+    display: grid;  
+    grid-template-columns: 37.5% 20% 37.5%;
+    grid-template-rows: 20% 70%;
+    font-family: 'Montserrat', sans-serif;
+    background:rgba(0,0,0,.87);
+    background-repeat: no-repeat;
+}
+
+#s1,#s2{
+    margin-top: -10%;
+    background-image: linear-gradient(120deg, rgba(105, 27, 27, 0.288) 45%, purple 50%, white 10%);
+    grid-column-start: 2;
+    grid-row-start: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: change-background 9s ease infinite;
+    border-radius: 5px;
+}
+#s2{
+    display: none;
+}
+.image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+    width: 98%;
+    border-radius: 100px;
+    box-shadow: inset 13px 13px 13px 13px rgba(0,0,0,0.8);
+    overflow: hidden;
+}
+#d{
+    color:white;
+}
+#auth_text_1{
+    color: white;
+    width: 80%;
+    font-size: 30px;
+    border-bottom: 1px solid red;
+    cursor: default;
+}
+.log_pass{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.buttons{
+    padding-bottom: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+input#input_login, input#input_password{
+    font-size: 20px;
+    height: 30px;
+    width: 100%;
+    border-radius: 50px;
+    text-align: center;
+}
+.button{
+    background-image: linear-gradient(90deg, #FFE27D 0%, #64E3FF 30%, #9192FF 85%);
+    animation: button-background 2s ease infinite;
+    font-size: 19px;
+    border-radius: 30px;
+	background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 10%;
+}
+#b1:active{
+    opacity: .0;
+}
+@keyframes button-background {
+    30%{
+        background-image: linear-gradient(90deg,  #9192FF 0%, #FFE27D 30%,  #64E3FF 85%);
+    }
+    60%{
+        background-image: linear-gradient(90deg,  #64E3FF 0%,  #9192FF 30%,  #FFE27D 85%);
+    }
+    100%{
+        background-image: linear-gradient(90deg, #FFE27D 0%, #64E3FF 30%, #9192FF 85%);
+    }
+}
+
+.button:hover{
+    background: #03e9f4;
+    animation: none;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+    -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+
+@keyframes change-background {
+    0% {
+        background: #457ba0;
+    }
+    10% {
+        background: #2d8a9b;
+    }
+    20%{
+        background: rgb(48, 194, 145);
+    }
+    30%{
+        background: #3cc54e;
+    }
+    40%{
+        background: rgb(174, 202, 47);
+    }
+    50%{
+        background: rgb(214, 156, 48);
+    }
+    60%{
+        background: rgb(224, 85, 42);
+    }
+    70%{
+        background: rgb(221, 47, 105);
+    }
+    80%{
+        background: rgb(138, 48, 211);
+    }
+    90%{
+        background: rgb(96, 118, 189);
+    }
+    100% {
+        background: #457ba0;
+    }
+}
