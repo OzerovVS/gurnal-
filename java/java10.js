@@ -111,6 +111,7 @@ function jy(){
             p.innerHTML = item1[parseInt(1 - 0.5 + Math.random() * (( item1.length - 1)  - 2 + 1))]
             p.style.padding = '2%'
             p.style.textAlign = 'center'
+            p.style.padding = '0 10%'
             if(ret() < 1600){
                 p.style.fontSize = '14px'
             }
@@ -123,7 +124,12 @@ function jy(){
             if(ret() < 800){
                 p.style.fontSize = '8px'
             }
-            p.style.padding = '0 10%'
+            if (ret() < 700){
+                p.style.fontSize = '2px'
+                p.style.padding = '0 50%'
+                document.getElementById('rpuz').style.flexWrap = 'wrap'
+
+            }
             document.getElementById(u).appendChild(p)
         }
     }
@@ -163,6 +169,21 @@ function update(){
     input.setAttribute('class', 'button')
     input.style.borderRadius = '20px'
     input.style.width = '40%'
+    if(ret() < 1600){
+        input.style.fontSize = '14px'
+    }
+    if(ret() > 2000){
+        input.style.fontSize = '25px'
+    }
+    if(ret() > 3000){
+        input.style.fontSize = '45px'
+    }
+    if(ret() < 800){
+        input.style.fontSize = '8px'
+    }
+    if (ret() < 700){
+        input.style.fontSize = '2px'
+    }
     input.setAttribute('onclick', 'opa()')
     input.type = 'button'
     document.getElementById('blockWithImage').appendChild(input)
@@ -170,7 +191,21 @@ function update(){
     input.id = 'text1'
     input.placeholder = 'Введите URL картинки'
     input.style.textAlign = 'center'
-    input.style.fontSize = '17px'
+    if(ret() < 1600){
+        input.style.fontSize = '14px'
+    }
+    if(ret() > 2000){
+        input.style.fontSize = '25px'
+    }
+    if(ret() > 3000){
+        input.style.fontSize = '45px'
+    }
+    if(ret() < 800){
+        input.style.fontSize = '8px'
+    }
+    if (ret() < 700){
+        input.style.fontSize = '2px'
+    }
     input.type = 'text'
     input.style.width = '80%'
     input.style.borderRadius = '20px'
@@ -182,6 +217,21 @@ function update(){
     input.style.display = 'none'
     input.setAttribute('class', 'button')
     input.style.borderRadius = '20px'
+    if(ret() < 1600){
+        input.style.fontSize = '14px'
+    }
+    if(ret() > 2000){
+        input.style.fontSize = '25px'
+    }
+    if(ret() > 3000){
+        input.style.fontSize = '45px'
+    }
+    if(ret() < 800){
+        input.style.fontSize = '8px'
+    }
+    if (ret() < 700){
+        input.style.fontSize = '2px'
+    }
     input.id = 'text2'
     input.setAttribute('onclick', 'opa_2()')
     input.type = 'button'
@@ -200,6 +250,21 @@ function update(){
         div.style.borderRadius = '20px'
         document.getElementById('information').appendChild(div)
         var label = document.createElement('p')
+        if(ret() < 1600){
+            label.style.fontSize = '14px'
+        }
+        if(ret() > 2000){
+            label.style.fontSize = '25px'
+        }
+        if(ret() > 3000){
+            label.style.fontSize = '55px'
+        }
+        if(ret() < 800){
+            label.style.fontSize = '8px'
+        }
+        if (ret() < 700){
+            label.style.fontSize = '2px'
+        }
         label.innerHTML = title[i]
         label.style.color = 'grey'
         document.getElementById('sa'+i).appendChild(label)
@@ -209,6 +274,22 @@ function update(){
         j.style.backgroundColor = '#a9a9a9'
         j.style.color = 'black'
         j.style.fontSize = '17px'
+        if(ret() < 1600){
+            j.style.fontSize = '14px'
+        }
+        if(ret() > 2000){
+            j.style.fontSize = '25px'
+        }
+        if(ret() > 3000){
+            j.style.fontSize = '55px'
+        }
+        if(ret() < 800){
+            j.style.fontSize = '8px'
+        }
+        if (ret() < 700){
+            j.style.fontSize = '2px'
+        }
+        
         j.style.borderRadius = '30px'
         j.style.width = '60%'
         j.style.textAlign = 'center'
@@ -218,8 +299,28 @@ function update(){
     input.value = 'Сохранить изменения'
     input.id = 'final'
     input.style.borderRadius = '20px'
-    input.style.width = '30%'
+    input.style.width = '50%'
     input.style.height = '10%'
+    if(ret() < 1600){
+        input.style.fontSize = '14px'
+    }
+    if(ret() > 2000){
+        input.style.fontSize = '25px'
+    }
+    if(ret() > 3000){
+        input.style.fontSize = '45px'
+    }
+    if(ret() < 800){
+        input.style.fontSize = '8px'
+    }
+    if (ret() < 700){
+        input.style.fontSize = '2px'
+        document.getElementById('text1').setAttribute('placeholder', 'Введите URL')
+        document.getElementById('text_1').style.width = '100%'
+        document.getElementById('text1').style.width = '100%'
+        document.getElementById('text2').style.width = '100%'
+        
+    }
     input.style.background = 'black'
     input.setAttribute('class', 'button')
     input.style.color = 'grey'
@@ -230,9 +331,6 @@ function update(){
     for(var i = 0; i < w.length; i++){
         w[i].getElementsByTagName('input')[0].value = user[i]
     }
-
-
-    
 }
 function jt(){ 
     document.getElementById('imagediv').innerHTML = ''
