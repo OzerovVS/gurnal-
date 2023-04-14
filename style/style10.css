@@ -1,33 +1,30 @@
-@import "bourbon";
 html, body {
-    transition: all .1s cubic-bezier(1,.45,0,.34);
-    height: 100%;
-} 
-div{
-    margin-top: 10%;
+    height: 99%;
+    transition: all 0.6s ease;
 }
 #str1{
     position: fixed;
-    inline-size: 100%;
-    display: grid;  
-    grid-template-columns: 37.5% 20% 37.5%;
-    grid-template-rows: 20% 70%;
+    display: flex;  
     font-family: 'Montserrat', sans-serif;
     background:rgba(0,0,0,.87);
-    background-repeat: no-repeat;
+    inline-size: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 #s1,#s2{
     margin-top: -10%;
-    background-image: linear-gradient(120deg, rgba(105, 27, 27, 0.288) 45%, purple 50%, white 10%);
     grid-column-start: 2;
     grid-row-start: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    animation: change-background 9s ease infinite;
     border-radius: 5px;
+}
+#s1{
+    width: 35%;
+    padding-top: 15%;
 }
 #s2{
     display: none;
@@ -37,17 +34,18 @@ div{
     justify-content: center;
     align-items: center;
     height: 40%;
-    width: 98%;
+    width: 60%;
     border-radius: 100px;
     box-shadow: inset 13px 13px 13px 13px rgba(0,0,0,0.8);
     overflow: hidden;
+    padding: 5%;
 }
 #d{
     color:white;
 }
 #auth_text_1{
     color: white;
-    width: 80%;
+    width: 60%;
     font-size: 30px;
     border-bottom: 1px solid red;
     cursor: default;
@@ -56,8 +54,11 @@ div{
     width: 90%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+}
+#input_login, #input_password{
+    margin-bottom: 10%;
 }
 .buttons{
     padding-bottom: 5%;
@@ -67,23 +68,16 @@ div{
 }
 input#input_login, input#input_password{
     font-size: 20px;
-    height: 30px;
+    height: 10%;
     width: 100%;
     border-radius: 50px;
     text-align: center;
 }
-.button{
-    background-image: linear-gradient(90deg, #FFE27D 0%, #64E3FF 30%, #9192FF 85%);
-    animation: button-background 2s ease infinite;
-    font-size: 19px;
-    border-radius: 30px;
-	background-color: transparent;
-    border: none;
-    cursor: pointer;
-    margin-left: 10%;
-}
 #b1:active{
     opacity: .0;
+}
+.image img{
+    border-radius: 100px;
 }
 @keyframes button-background {
     30%{
@@ -106,7 +100,6 @@ input#input_login, input#input_password{
                 0 0 200px #03e9f4;
     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
 }
-
 @keyframes change-background {
     0% {
         background: #457ba0;
@@ -140,5 +133,784 @@ input#input_login, input#input_password{
     }
     100% {
         background: #457ba0;
+    }
+}
+#str2, #str4{
+    display: flex;
+    background-image: linear-gradient(to bottom,  rgb(0,0,0,0.87) 40%, grey 60%,  rgb(73,65,52) 70%);
+    flex-direction: column;
+    inline-size: 99.2%;
+}
+#str2 * {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#pol{
+    color: white;
+    background: #1D464E;
+    text-align: right;
+    display: flex;
+}
+#infa{
+    background:rgba(0,0,0,.87);
+    margin-left: 60%;
+    display: flex;
+    font-size: 16px;
+    flex-direction: column;
+    margin-right: 2%;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#profile_buttons{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    inline-size: 100%;
+    text-align: center;
+}
+#profile_buttons div{
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 1px 0 rgb(176, 202, 81);
+    transition: all 0.5s ease;
+    height: 35%;
+    width: 30%;
+    margin-left: 15%;
+
+}
+#profile_buttons div:hover{
+    box-shadow: 0 1px 0 rgba(91, 16, 177, 0.747);
+    
+}
+ul{
+    margin-top: 0%;
+    margin-right: -10%;
+    list-style-type: none;
+    display: none;
+}
+li{
+    margin-left: -20%;
+    font-size: 14px;
+    line-height: 200%;
+    background: #5c642d;
+    border: solid 1px;
+    text-align: center;
+    width: 150%;
+    color: white;
+    margin-top: 1%;
+    border-radius: 20px;
+}
+#rp{
+    border-radius: 20px;
+    margin-left: 2.5%;
+    margin-top: 3%;
+    background: #74613a;
+    width: 95%;
+    height: 78%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 22px;
+    box-shadow: 0 0 12px 6px black;
+}
+#rp div{
+    width: 60%;
+    border-bottom: solid ;
+    margin-top: 3.5%;
+    display: flex;
+    justify-content: space-between;
+}
+#str3, #str4, #str5{
+    background:rgba(0,0,0,.87);
+    display: flex;
+    flex-direction: column;
+    color: white
+}
+#oc{
+    margin-top: 4%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+#oc div{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+    margin-bottom: 0.5%;
+    width: 90%;
+    height: 20%;
+    border-radius: 10px;
+    border: 1px solid;
+    align-items: center;
+    justify-content: space-evenly;
+    text-decoration:solid;
+    font-size: 18px;
+    border-image: linear-gradient(to bottom right, rgba(0,0,0,.87), black , red, pink);
+    border-image-slice: 1;
+    text-align: center;
+}
+#oc div:hover{
+    border-image: none;
+    background: linear-gradient(to left,#2C3E50, #000);   
+    border-color: transparent;
+    color: rgb(173, 14, 14);
+    font-size: 22px;
+    font-family: 'Consolas';
+}
+#oc p{
+    font-size: 25px;
+    font-family: 'Impact';
+    background: linear-gradient(to left, #5E5368, #000 100%);
+    color: rgb(156, 87, 87);
+    width: 15%;
+    text-align: center;
+}
+#rpuzs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    padding: 4%;
+    margin-right: 1%;
+}
+#rpuzs p{
+    font-size: 25px;
+}
+#rpuz div{
+    background: url(https://img.freepik.com/free-vector/gradient-black-background-with-wavy-lines_23-2149151738.jpg?w=740&t=st=1681393987~exp=1681394587~hmac=e0d0ecd2a631f52803019e72bcf6cb7729c892a72ccbf08412d66e0bb2b97c9a);
+    overflow: hidden;
+    color: rgb(168, 148, 148);
+    padding-top: 2%;
+}
+@keyframes gg{
+    0%{
+        overflow: hidden;
+        transform: translateY(9000px);
+    }
+    100%{
+       transform: translateY(0px) 
+    }
+}
+@keyframes fade {
+    from {
+      opacity: 1;
+      visibility: visible;
+    }
+    to {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+#rpuz{
+    display: none;
+    justify-content: center;
+    align-items: center;       
+}
+#str4, #str5, #profile{
+    inline-size: 99%;
+}
+#text{
+    width: 50%;
+    text-align: center;
+    box-shadow: inset 5px 13px 6px 5px rgba(7, 7, 7, 0.8);
+    border-radius: 30px;
+    background: rgba(54, 47, 47, 0.333);
+    cursor: pointer
+}
+#text p{
+    padding: 0 10%;
+}
+#l4{
+    margin-top: 12%;
+    margin-right: 5%;
+    list-style-type: none;
+    display: none;
+}
+#l4 li{
+    margin-left: -20%;
+    font-size: 14px;
+    background: #5c642d;
+    border: solid 1px;
+    text-align: center;
+    width: 200%;
+    color: white;
+    cursor: pointer;
+}
+#imagediv{
+    height: 70%;
+}
+#profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#profile img{
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+#txt{
+    margin-top: -30%;
+    width: 324px;
+    height: 324px;
+    text-align: center;
+    font-size: 20px;
+    z-index: 0;
+    animation: gg 0.6s ease;
+}
+#bt1{
+    border-radius: 20px;
+    outline: hidden;
+    font-size: 20px;
+    cursor: pointer;
+}
+#bt1:hover{
+    border: none;
+    background: #03e9f4;
+    color: white;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+    -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+#newProfile{
+    margin: 5%;
+    display: none;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 20px;
+    border-image: linear-gradient(to bottom right, rgba(0,0,0,.87), black , red, pink); 
+    border-image-slice: 1;
+    height: 80%;
+    text-align: center;
+    animation: wa 1s;
+}
+#newProfile img{
+    border-radius: 60px;
+    padding: 5%;
+}
+#blockWithImage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    border-right:  1px solid #572121;
+    height: 100%;
+}
+#text1, #text2{
+    animation: ws 1s;
+}
+@keyframes ws{
+    0%{
+        overflow: hidden;
+        transform: translateX(-9000px);
+    }
+    100%{
+       transform: translateX(0px) 
+    }
+}
+@keyframes wa{
+    0%{
+        overflow: hidden;
+        transform: translateX(9000px);
+    }
+    100%{
+       transform: translateX(0px) 
+    }
+}
+#information{
+    width: 70%;
+    height: 100%;
+    background-image: linear-gradient(to bottom right, rgba(0,0,0,.87), rgb(34, 29, 29)); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.button{
+    background-image: linear-gradient(90deg, #FFE27D 0%, #64E3FF 30%, #9192FF 85%);
+    animation: button-background 2s ease infinite;
+    font-size: 19px;
+    border-radius: 30px;
+	background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 10%;
+}
+#str5 .button{
+    background: #000;
+    cursor: pointer;
+    margin-left: 0%;
+    animation: none;
+    font-size: 17px;
+    color: grey;
+    margin-top: 1%;
+
+}
+@media ( min-width: 4300px) and (max-width: 6000px){
+    #s1 p{
+        font-size: 120px;
+        width: 60%
+    }
+    #s1 input{
+        font-size: 100px;
+    }
+    #s1 .image{
+        width: 60%
+    }
+    #rp{
+        font-size: 80px;
+    }
+    #infa{
+        font-size: 55px;
+    }
+    #profile_buttons div{
+        font-size: 65px;
+    }
+    li, #l4 li{
+        font-size: 40px;
+        width: 400px
+    }
+    #l4{
+        margin-top: 8.5%
+    }
+}
+@media ( min-width: 3300px) and (max-width: 4300px){
+    #s1 p{
+        font-size: 80px;
+        width: 60%
+    }
+    #s1 input{
+        font-size: 60px;
+    }
+    #s1 .image{
+        width: 60%
+    }
+    #rp{
+        font-size: 60px;
+    }
+    #infa{
+        font-size: 45px;
+    }
+    #profile_buttons div{
+        font-size: 45px;
+    }
+    li, #l4 li{
+        font-size: 40px;
+        width: 400px
+    }
+    #l4{
+        margin-top: 11.5%
+    }
+}
+@media ( min-width: 2200px) and (max-width: 3300px){
+    #s1 p{
+        font-size: 60px;
+        width: 60%
+    }
+    #s1 input{
+        font-size: 40px;
+    }
+    #s1 .image{
+        width: 60%
+    }
+    #rp{
+        font-size: 40px;
+    }
+    #infa{
+        font-size: 35px;
+    }
+    #profile_buttons div{
+        font-size: 35px;
+    }
+    li, #l4 li{
+        font-size: 30px;
+        width: 400px
+    }
+    #l4{
+        margin-top: 13%
+    }
+}
+@media ( min-width: 1400px) and (max-width: 2200px){
+    #s1 p{
+        font-size: 25px;
+        width: 60%
+    }
+    #s1 input{
+        font-size: 25px;
+    }
+    #s1 .image{
+        width: 60%
+    }
+    #rp{
+        font-size: 30px;
+    }
+    #infa{
+        font-size: 24px;
+    }
+    #profile_buttons div{
+        font-size: 24px;
+    }
+    li, #l4 li{
+        font-size: 24px;
+        width: 200px
+    }
+    #l4{
+        margin-top: 13%
+    }
+}
+@media (max-width: 1060px) and (min-width: 900px){
+    #s1{
+        font-size: 12px;
+    }
+    #rp{
+        font-size: 14px;
+    }
+    #infa{
+        font-size: 10px;
+    }
+    #profile_buttons div{
+        font-size: 10px;
+    }
+    li, #l4 li{
+        font-size: 11px;
+        width: 120px
+    }
+    #l4{
+        margin-top: 9.5%
+    }
+    #str2{
+        inline-size: 98%;
+    }
+    #oc p{
+        width: 40%;
+    }
+}
+@media (max-width: 900px) and ( min-width: 800px){
+    #s1 p{
+        font-size: 14px;
+        width: 30%
+    }
+    #s1 input{
+        font-size: 10px;
+    }
+    #s1 .image{
+        width: 60%
+    }
+    #rp{
+        font-size: 12px;
+    }
+    #infa{
+        width: 100%;
+        font-size: 2px;
+    }
+    #profile_buttons div{
+        font-size: 6px;
+    }
+    li, #l4 li{
+        font-size: 8px;
+        width: 120px
+    }
+    #l4{
+        margin-top: 10.5%
+    }
+    #str2{
+        inline-size: 98%;
+        height: 98%;
+    }
+    #oc p{
+        width: 40%;
+    }
+}
+@media (max-width: 800px) and ( min-width: 700px){
+    #s1 p{
+        font-size: 14px;
+        width: 30%
+    }
+    #s1 input{
+        font-size: 10px;
+    }
+    #s1 .image{
+        width: 60%
+    }
+    #rp{
+        font-size: 12px;
+    }
+    #infa{
+        width: 100%;
+        font-size: 2px;
+    }
+    #profile_buttons div{
+        font-size: 6px;
+    }
+    li, #l4 li{
+        font-size: 8px;
+        width: 120px
+    }
+    #l4{
+        margin-top: 12.5%
+    }
+    #str2{
+        inline-size: 98%;
+        height: 98%;
+    }
+    #oc p{
+        width: 60%;
+    }
+}
+@media (max-width: 700px) and ( min-width: 600px){
+    #s1 p{
+        font-size: 14px;
+        width: 30%
+    }
+    #s1 input{
+        font-size: 10px;
+    }
+    #s1 .image{
+        width: 60%
+    }
+    #rp{
+        font-size: 6px;
+    }
+    #infa{
+        width: 100%;
+        font-size: 4px;
+    }
+    #profile_buttons div{
+        font-size: 6px;
+    }
+    li, #l4 li{
+        font-size: 3px;
+        width: 100px
+    }
+    #l4{
+        margin-top: 15%
+    }
+    #str2{
+        inline-size: 98%;
+        height: 98%;
+    }
+    #oc p{
+        width: 60%;
+    }
+}
+@media (max-width: 600px) and ( min-width: 500px){
+    #s1 p{
+        font-size: 12px;
+        width: 30%
+    }
+    #s1 input{
+        font-size: 8px;
+    }
+    #s1 .image{
+        width: 30%
+    }
+    #rp{
+        font-size: 10px;
+        padding-bottom: 10%;
+    }
+    #infa{
+        margin-left: -2%;
+        width: 30%;
+        font-size: 2px;
+    }
+    #profile_buttons div{
+        font-size: 6px;
+        margin-right: 5%;
+    }
+    li, #l4 li{
+        font-size: 3px;
+        width: 100px
+    }
+    #l4{
+        margin-top: 20.5%
+    }
+    #str2{
+        inline-size: 98%;
+        height: 98%;
+    }
+    #oc p{
+        width: 60%;
+    }
+}
+@media(min-width: 1600px){
+    #oc p, #oc div{
+        font-size: 5em;
+    }
+    #oc div:hover{
+        font-size: 5.5em;
+    }
+    #oc p{
+        width: 30%;
+    }
+}
+@media (min-width: 2000px){
+    #rpuz div, #text p{
+        font-size: 2rem
+    }
+}
+@media (min-width: 3000px){
+    #rpuz div, #text p{
+        font-size: 4rem
+    }
+}
+@media (min-width: 5000px){
+    #rpuz div, #text p{
+        font-size: 6rem
+    }
+}
+@media (max-width:900px){
+    #text p{
+        width: 80%;
+        font-size: 14px;
+    }
+    #str4{
+        inline-size: 97%;
+    }
+}
+@media (max-width: 300px){
+    #text{
+        margin-top: 100%
+    }
+    #text p{
+        font-size: 1px;
+    }
+}
+@media (max-width: 500px) and ( min-width: 400px){
+    #s1 p{
+        font-size: 8px;
+        width: 30%
+    }
+    #s1 input{
+        font-size: 6px;
+    }
+    #s1 .image{
+        width: 50%;
+        height: 30%
+    }
+    #rp{
+        font-size: 1px;
+        padding-bottom: 20%;
+    }
+    #infa{
+        margin-left: -10%;
+        width: 30%;
+        height: 100%;
+        font-size: 1px;
+    }
+    #profile_buttons div{
+        font-size: 1px;
+        margin-left: 0
+    }
+    li, #l4 li{
+        font-size: 1px;
+        width: 100px
+    }
+    #l4{
+        margin-top: 24.5%
+    }
+    #str2{
+        inline-size: 95%;
+        height: 98%;
+    }
+    #oc p{
+        width: 100%;
+    }
+}
+@media (max-width: 400px) and ( min-width: 300px){
+    #s1 p{
+        font-size: 2px;
+        width: 40%
+    }
+    #s1 input{
+        font-size: 2px;
+    }
+    #s1 .image{
+        width: 50%;
+        height: 30%
+    }
+    #rp{
+        font-size: 1px;
+        padding-bottom: 20%;
+        padding-bottom: 30%;
+    }
+    #infa{
+        margin-left: -10%;
+        width: 50%;
+        font-size: 1px;
+    }
+    #profile_buttons div{
+        margin-left: 2%;
+        font-size: 1px;
+    }
+    li, #l4 li{
+        font-size: 1px;
+        width: 100px
+    }
+    #l4{
+        margin-top: 32.5%
+    }
+    #str2{
+        inline-size: 94%;
+        height: 98%;
+    }
+    #oc p{
+        width: 100%;
+    }
+    
+}
+@media (max-width: 300px){
+    #s1 p{
+        font-size: 1px;
+        width: 50%
+    }
+    #s1 input{
+        font-size: 1px;
+    }
+    #s1 .image{
+        width: 50%;
+        height: 20%
+    }
+    #s1{
+        margin-top: -15%
+    }
+    #rp{
+        font-size: 1px;
+        padding-bottom: 100%
+    }
+    #infa{
+        margin-left: -10%;
+        width: 50%;
+        font-size: 4px;
+    }
+    #profile_buttons div{
+        margin-left: 0;
+        font-size: 1px;
+    }
+    li, #l4 li{
+        font-size: 1px;
+        width: 100px
+    }
+    #l4{
+        margin-top: 42.5%
+    }
+    #str2{
+        inline-size: 96%;
+        height: 98%;
+    }
+    #oc p{
+        width: 100%;
+    }
+    #oc div{
+        font-size: 2px
+    }
+    #oc div:hover{
+        font-size: 5px
     }
 }
